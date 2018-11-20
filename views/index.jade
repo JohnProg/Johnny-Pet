@@ -1,0 +1,65 @@
+extends layout
+
+block content
+	nav(class="navbar navbar-default", role="navigation")
+		div(class="container-fluid")
+			div(class="navbar-header")
+				button(type="button", class="navbar-toggle", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+				span(class="sr-only")
+					Toggle navigation
+				span(class="icon-bar")
+				span(class="icon-bar")
+				span(class="icon-bar")
+				a(href='#', class="navbar-brand") Johnny Pet
+	div(clas="container-fluid")
+		div(class="row")
+			div(class="col-md-4")
+				ul(class="nav nav-pills nav-stacked")
+					li
+						a Mascota: Alf
+					li 
+						a Dueño: Oscar Lopez
+					li
+						a Horario:<br>  07:00 am - 11:00 pm.
+			div(class="col-md-8")
+				h1(class="page-header") Panel de control
+				div(class="row placeholders")
+					ul
+						li Estado de la mascota: Hambrienta
+						li Nivel de comida: Alta
+				hr
+
+				ul(class="nav nav-tabs", ole="tablist")
+					li(class="active")
+						a(href="#alimentacion", data-toggle="tab") Alimentacion
+					li
+						a(href="#notificaciones", data-toggle="tab") Notificaciones
+
+				div(id="my-tab-content", class="tab-content")
+					div(class="tab-pane active" id="alimentacion")
+						table(class="table table-condensed")
+							thead
+								tr
+									th Fecha
+									th Hora
+							tbody
+								tr
+									td 12/08/2014
+									td 01:00 pm.
+					div(class="tab-pane" id="notificaciones")
+						table(class="table table-condensed")
+							thead
+								tr
+									th Fecha
+									th Hora
+									th Mensaje
+							tbody
+								tr
+									td 12/08/2014
+									td 01:00 pm.
+									td No hay comida en el contenedor
+
+	script(src='/javascripts/libs/jquery-2.1.0.min.js')
+	script(src='/javascripts/events.js')
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+	script(src='/bootstrap/js/bootstrap.min.js')
